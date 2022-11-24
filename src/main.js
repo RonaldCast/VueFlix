@@ -4,7 +4,7 @@ import router from './router'
 
 //style configuration
 import ElementPlus from 'element-plus'
-import './assets/main.css'
+import './assets/main.scss'
 
 
 const app = createApp(App)

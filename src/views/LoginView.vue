@@ -1,9 +1,14 @@
 <template>
   <div>
-    <h1>Login</h1>
+    <BannerBackground>
+      <LoginForm />
+    </BannerBackground>
   </div>
 </template>
+<script setup>
+import BannerBackground from "../components/login/BannerBackground.vue";
+import LoginForm from "../components/login/LoginForm.vue";
 
-<style>
+</script>
 
-</style>
+<style></style>
