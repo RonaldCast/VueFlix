@@ -29,7 +29,7 @@ const goLogin = () => {
 <style lang="scss" scoped>
 @import "../../assets/variable";
 .loginForm {
-  padding: 20px;
+  padding: 50px 20px;
   border-radius: 5px;
   background: $vt-c-primary-black;
   width: 100%;
@@ -38,7 +38,7 @@ const goLogin = () => {
   -moz-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.75);
   > h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: $vt-c-white;
   }
   &__logo {

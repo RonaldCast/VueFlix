@@ -7,7 +7,6 @@
         <img :src="picture"/>
         <p>{{name}}</p>
         <div>
-
             <el-button @click="handleLogout">Log Out</el-button>
         </div>
     </div>
@@ -44,7 +43,9 @@ const handleLogout = () =>
   align-items: center;
   padding: 15px 40px;
   position: fixed;
+  top:0;
   width: 100%;
+  z-index: 100;
 
   background: $vt-c-primary-black;
   -webkit-box-shadow: 0px 8px 28px -8px rgba(0, 0, 0, 0.75);
