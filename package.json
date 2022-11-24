@@ -8,6 +8,7 @@
     "test:unit": "vitest --environment jsdom --root src/"
   },
   "dependencies": {
+    "@auth0/auth0-vue": "^1.0.2",
     "axios": "^1.2.0",
     "element-plus": "^2.2.22",
     "vue": "^3.2.41",

@@ -6,13 +6,24 @@
     </div>
     <h1>Log in</h1>
     <div class="loginForm__buttonContainer">
-      <el-button> Log in</el-button>
+      <el-button @click="goLogin"> Log in</el-button>
     </div>
   </form>
 </template>
 <script setup>
 import Logo from "../common/Logo.vue";
+import { useAuth0 } from "@auth0/auth0-vue";
 
+const { loginWithRedirect } = useAuth0();
+
+const goLogin = () => {
+  loginWithRedirect({
+    prompt: "login",
+    appState: {
+      target: "/home",
+    },
+  });
+}
 
 </script>
 <style lang="scss" scoped>

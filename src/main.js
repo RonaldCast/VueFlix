@@ -1,15 +1,22 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import { createAuth0 } from "@auth0/auth0-vue";
 
 //style configuration
-import ElementPlus from 'element-plus'
-import './assets/main.scss'
+import ElementPlus from "element-plus";
+import "./assets/main.scss";
 
+const app = createApp(App);
 
-const app = createApp(App)
+app.use(router);
+app.use(ElementPlus);
+app.use(
+  createAuth0({
+    domain: import.meta.env.VITE_AUTH0_DOMAIN,
+    client_id: import.meta.env.VITE_AUTH0_CLIENT_ID,
+    redirect_uri: import.meta.env.VITE_AUTH0_CALLBACK_URL,
+  })
+);
 
-app.use(router)
-app.use(ElementPlus)
-
-app.mount('#app')
+app.mount("#app");
