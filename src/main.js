@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import { createAuth0 } from "@auth0/auth0-vue";
+import { store } from "./store/index";
 
 //style configuration
 import ElementPlus from "element-plus";
@@ -18,5 +19,6 @@ app.use(
     redirect_uri: import.meta.env.VITE_AUTH0_CALLBACK_URL,
   })
 );
+app.use(store)
 
 app.mount("#app");
