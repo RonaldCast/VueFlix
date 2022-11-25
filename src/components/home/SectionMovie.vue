@@ -1,7 +1,10 @@
 <template>
   <div class="sectionMovie">
-    <FilterMovie @send-data="filterMovie" />
-    <ContainerMovie :list-movie="movies" />
+    <div class="sectionMovie__filter">
+
+      <FilterMovie @send-data="filterMovie" />
+    </div>
+    <ContainerMovie class="sectionMovie__movies" :list-movie="movies" />
   </div>
 </template>
 <script setup>
@@ -55,5 +58,17 @@ const filterMovie = (data) => {
   background: $vt-c-primary-black;
   padding: 20px 35px;
   color: #fff;
+  position: relative;
+
+  &__filter{
+    position: absolute;
+    top:-60px; 
+    left:35px;
+    right: 35px;
+    
+  }
+  &__movies{
+    margin-top:50px
+  }
 }
 </style>
