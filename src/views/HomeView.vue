@@ -8,12 +8,14 @@
     :program-type="bannerMovie.programType"
     :release-year="bannerMovie.releaseYear"
     />
+    <SectionMovie/>
   </main>
 </template>
 
 <script setup>
 import NavBar from "../layout/NavBar.vue";
 import BannerMovie from "../components/home/BannerMovie.vue";
+import SectionMovie from "../components/home/SectionMovie.vue"
 import { computed, onMounted } from "vue";
 import { useAuth0 } from "@auth0/auth0-vue";
 import { useStore } from "vuex";

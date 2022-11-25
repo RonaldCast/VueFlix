@@ -7,7 +7,7 @@
         <img :src="picture"/>
         <p>{{name}}</p>
         <div>
-            <el-button @click="handleLogout">Log Out</el-button>
+            <el-button type="danger" @click="handleLogout">Log Out</el-button>
         </div>
     </div>
   </section>
