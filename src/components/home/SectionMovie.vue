@@ -68,7 +68,11 @@ const filterMovie = (data) => {
     
   }
   &__movies{
-    margin-top:50px
+    margin-top:50px; 
+    @media (max-width: 1000px) {
+      margin-top:110px; 
+  }
+    
   }
 }
 </style>

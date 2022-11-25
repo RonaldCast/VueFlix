@@ -54,13 +54,12 @@
       </div>
     </div>
   </section>
-
 </template>
 <script setup>
-import { reactive,watch, defineEmits } from "vue";
+import { reactive, watch, defineEmits } from "vue";
 import { typeFilms, typeSort } from "../../utils/constants/index";
 
-const emits = defineEmits(["sendData"])
+const emits = defineEmits(["sendData"]);
 const filter = reactive({
   name: "",
   orderBy: "",
@@ -76,8 +75,8 @@ const clearFilter = () => {
 };
 
 watch(filter, () => {
-    emits("sendData", filter)
-})
+  emits("sendData", filter);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -103,6 +102,24 @@ watch(filter, () => {
   }
   &__button {
     width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 2fr repeat(2, 1fr);
+  }
+
+  > div:nth-child(4) {
+    @media (max-width: 1000px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
+  > div:nth-child(5) {
+    @media (max-width: 1000px) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
   }
 }
 </style>
