@@ -1,3 +1,5 @@
+import axios from "axios"
+
 export const movie = {
   namespaced: true,
   state: {
@@ -15,21 +17,30 @@ export const movie = {
       },
       releaseYear: 2016,
     },
-    listMovies: []
+    dataMovie:{
+      total: 0,
+      listMovies: [], 
+
+    }
+
   },
 
   mutations:{
-    SET_LIST_MOVIE(state, payload) {
+    SET_DATA_MOVIE(state, payload) {
+      state.dataMovie.total = payload.total; 
+      state.dataMovie.listMovies = payload.entries; 
 
     }
   }, 
 
   actions:{
-    getListMovies({commit}) {
+    async getListMovies({commit}) {
       try{
-
+        const resp = await axios.get("http://127.0.0.1:5173/moves.json");
+        commit("SET_DATA_MOVIE", resp.data)
+        console.log(resp.data)
       }catch(e) {
-        
+        console.error(e)
       }
     }
   }
