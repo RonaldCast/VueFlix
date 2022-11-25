@@ -15,5 +15,24 @@ export const movie = {
       },
       releaseYear: 2016,
     },
+    listMovies: []
   },
+
+  mutations:{
+    SET_LIST_MOVIE(state, payload) {
+
+    }
+  }, 
+
+  actions:{
+    getListMovies({commit}) {
+      try{
+
+      }catch(e) {
+        
+      }
+    }
+  }
+
+
 };
